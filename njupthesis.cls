@@ -428,7 +428,7 @@
   
 \vspace{5cm}
 
-\fontsize{16pt}{16pt}\selectfont{\kaiti 日期：\quad \thebegindate {} 至 \quad \thefinishdate \\}
+\fontsize{16pt}{16pt}\selectfont{\kaiti 日期：\quad \thebegindate {} 至\hspace{.5pc} \thefinishdate \\}
 \end{center}
 
 \newpage
