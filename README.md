@@ -1,14 +1,16 @@
 # NUPThesis
 
+[![](https://img.shields.io/badge/Overleaf-NJUPT-blue.svg?style=flat-square)](https://www.overleaf.com/latex/templates/njupt-thesis-template/phdhtstygbyb)
+
 南京邮电大学毕业论文LaTex模版
 
 ## 这是什么
 
 NJUPThesis-Bachelor 是针对南京邮电大学本科理工艺教类本科生毕业设计、论文的 LaTeX 模版。本模版基于电子科技大学 [`ThesisUETSC`](https://github.com/wanygen/ThesisUESTC) 模版二次开发而成，同时，北京邮电大学 [`BUPTBachelorThesis`](https://github.com/sqyx008/BUPTBachelorThesis) 项目也对本模板的形成有较大的影响，在此向原作者们表示感谢！
 
-## 系统要求
+## 系统环境
 
-1. 使用 `OverLeaf` 在线编辑。
+1. 使用 `OverLeaf` [在线编辑](https://www.overleaf.com/latex/templates/njupt-thesis-template/phdhtstygbyb)。
 2. 在 `Windows` 系统中，直接安装 `TeX Live` （其中已包含需要的 `XeLaTeX` 和 `BibTeX` ）， 同时安装 `TeXworks`（安装过程中有勾选框，选中即可）。你也可以使用“TeX Live + 自己喜爱的编辑器 + 扩展”的方式，如使用`TeX Live` + `Visual Studio Code` + `LaTeX workshop`。
 3. 在 `MacOS` 系统中，直接安装 `MacTeX`, 编辑器可用自带的 `TeXshop`, 也可使用 `Visual Studio Code` 进行编辑。
 
