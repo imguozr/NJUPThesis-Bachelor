@@ -488,6 +488,7 @@
 }
 
 \newcommand{\thesischapterexordium}{
+  \newpage
   \addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
   \standardhead
   \pagenumbering{arabic}
