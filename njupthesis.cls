@@ -311,6 +311,7 @@
 
 \AddEverypageHook{\addtocontents{toc}{
   \protect\cftsetpnumwidth{\widthof{\thepage}-1pt}
+  \protect\thispagestyle{empty}
 }}
 
 \AddEverypageHook{\addtocontents{lof}{
@@ -329,16 +330,17 @@
 
 \setlength{\cftbeforetoctitleskip}{0pt}
 \setlength{\cftaftertoctitleskip}{18pt}
-\setlength{\cftbeforechapskip}{0pt}
+\setlength{\cftbeforechapskip}{5pt}
 
 \addtolength{\cftchapnumwidth}{25pt}
 
+\cftsetindents{chapter}{0pt}{60pt}
 \cftsetindents{section}{21pt}{22pt}
 \cftsetindents{subsection}{44pt}{31pt}
 \cftsetindents{subsubsection}{76pt}{41pt}
 
-\renewcommand{\cfttoctitlefont}{\fontsize{15pt}{15pt}\selectfont\heiti}
-\renewcommand\cftchapfont{\heiti}
+\renewcommand{\cfttoctitlefont}{\fontsize{16pt}{16pt}\selectfont\heiti}
+\renewcommand{\cftchapfont}{\fontsize{14pt}{14pt}}
 
 \newcommand{\chinesedegreename}{本科}
 \newcommand{\chinesebooktitle}{本科生毕业设计（论文）}
