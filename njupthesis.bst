@@ -20,8 +20,8 @@ ENTRY
   note
   language
 }
-{}
-{label}
+{ entry.lang entry.is.electronic entry.numbered }
+{ label extra.label sort.label short.list entry.mark entry.url }
 
 STRINGS { s t}
 
@@ -42,6 +42,121 @@ FUNCTION {or}
     'skip$
   if$
 }
+
+FUNCTION {field.or.null}
+{ duplicate$ empty$
+    { pop$ "" }
+    'skip$
+  if$
+}
+
+INTEGERS { lang.zh lang.ja lang.en lang.ru lang.other }
+
+INTEGERS { charptr len }
+
+INTEGERS { byte second.byte }
+
+INTEGERS { char.lang tmp.lang }
+
+STRINGS { tmp.str }
+
+FUNCTION {get.str.lang}
+{ 'tmp.str :=
+  lang.other 'tmp.lang :=
+  #1 'charptr :=
+  tmp.str text.length$ #1 + 'len :=
+    { charptr len < }
+    { tmp.str charptr #1 substring$ chr.to.int$ 'byte :=
+      byte #128 <
+        { charptr #1 + 'charptr :=
+          byte #64 > byte #91 < and byte #96 > byte #123 < and or
+            { lang.en 'char.lang := }
+            { lang.other 'char.lang := }
+          if$
+        }
+        { tmp.str charptr #1 + #1 substring$ chr.to.int$ 'second.byte :=
+          byte #224 <
+            { charptr #2 + 'charptr :=
+              byte #207 > byte #212 < and
+              byte #212 = second.byte #176 < and or
+                { lang.ru 'char.lang := }
+                { lang.other 'char.lang := }
+              if$
+            }
+            { byte #240 <
+                { charptr #3 + 'charptr :=
+                  byte #227 > byte #234 < and
+                    { lang.zh 'char.lang := }
+                    { byte #227 =
+                        { second.byte #143 >
+                            { lang.zh 'char.lang := }
+                            { second.byte #128 > second.byte #132 < and
+                                { lang.ja 'char.lang := }
+                                { lang.other 'char.lang := }
+                              if$
+                            }
+                          if$
+                        }
+                        { byte #239 =
+                          second.byte #163 > second.byte #172 < and and
+                            { lang.zh 'char.lang := }
+                            { lang.other 'char.lang := }
+                          if$
+                        }
+                      if$
+                    }
+                  if$
+                }
+                { charptr #4 + 'charptr :=
+                  byte #240 = second.byte #159 > and
+                    { lang.zh 'char.lang := }
+                    { lang.other 'char.lang := }
+                  if$
+                }
+              if$
+            }
+          if$
+        }
+      if$
+      char.lang tmp.lang >
+        { char.lang 'tmp.lang := }
+        'skip$
+      if$
+    }
+  while$
+  tmp.lang
+}
+
+FUNCTION {check.entry.lang}
+{ author field.or.null
+  title field.or.null *
+  get.str.lang
+}
+
+FUNCTION {set.entry.lang}
+{ language empty$
+    { check.entry.lang }
+    { language "english" = language "american" = or language "british" = or
+        { lang.en }
+        { language "chinese" =
+            { lang.zh }
+            { language "japanese" =
+                { lang.ja }
+                { language "russian" =
+                    { lang.ru }
+                    { check.entry.lang }
+                  if$
+                }
+              if$
+            }
+          if$
+        }
+      if$
+    }
+  if$
+  'entry.lang :=
+}
+
 
 INTEGERS{ l }
 FUNCTION{ string.length }
@@ -81,7 +196,19 @@ FUNCTION {trim} {
 }
 
 FUNCTION {bbl.etal}
-{ "et~al" }
+{ entry.lang lang.zh =
+    { "等" }
+    { entry.lang lang.ja =
+        { "他" }
+        { entry.lang lang.ru =
+            { "идр" }
+            { "et~al." }
+          if$
+        }
+      if$
+    }
+  if$
+}
 
 
 FUNCTION {bib.begin}
@@ -303,22 +430,17 @@ FUNCTION {book}
     address missing$
     'skip$
     {
-        format.address write$ ": " write$
+    	format.address write$ ": " write$
     } if$
     format.publisher write$ add.comma
     format.year write$
     pages missing$
     'skip$
     {
-        add.comma
-        format.pages write$
+    	add.comma
+    	format.pages write$
     } if$
     newline$
-}
-
-FUNCTION {incollection}
-{
-    book
 }
 
 FUNCTION {conference}
@@ -337,7 +459,7 @@ FUNCTION {conference}
     address missing$
     'skip$
     {
-        format.address write$ add.comma
+    	format.address write$ add.comma
     } if$
     format.year write$ add.comma
     format.pages write$
@@ -360,16 +482,29 @@ FUNCTION {article}
     format.authors write$ add.period
     format.title "[J]" * write$ add.period
     format.journal write$ add.comma
-    format.year write$ add.comma
-    
-    number missing$
-    {
-        volume ": " * write$
+    format.year write$ 
+	
+	volume missing$
+	{
+        number missing$
+		{
+		} {
+		    "(" write$ 
+			number ")" * write$
+		 } if$
     } {
-        volume "(" *
-        number *
-        "): " * write$
+	    number missing$
+		{
+		   add.comma 
+		 	volume  "" * write$
+		} {
+			add.comma
+			volume "(" *
+		 	number *
+			")" * write$
+		 } if$
     } if$
+	 ": "  write$
     format.pages write$
     newline$
 }
@@ -382,7 +517,7 @@ FUNCTION {thesis}
     address missing$
     'skip$
     {
-        format.address write$ ": " write$
+    	format.address write$ ": " write$
     } if$
     format.institution write$ add.comma
     format.year write$ add.comma
@@ -425,7 +560,7 @@ FUNCTION {techreport}
     address missing$
     'skip$
     {
-        format.address write$ ": " write$
+    	format.address write$ ": " write$
     } if$
     format.institution write$ add.comma
     format.date write$
@@ -469,7 +604,7 @@ FUNCTION {digital}
 
 FUNCTION {onlynote}
 {
-    bibitem.begin
+	bibitem.begin
     note write$
     newline$
 }
