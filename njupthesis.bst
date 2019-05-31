@@ -136,19 +136,11 @@ FUNCTION {check.entry.lang}
 FUNCTION {set.entry.lang}
 { language empty$
     { check.entry.lang }
-    { language "english" = language "american" = or language "british" = or
+    { language "english" = 
         { lang.en }
         { language "chinese" =
             { lang.zh }
-            { language "japanese" =
-                { lang.ja }
-                { language "russian" =
-                    { lang.ru }
-                    { check.entry.lang }
-                  if$
-                }
-              if$
-            }
+            { check.entry.lang }
           if$
         }
       if$
@@ -196,18 +188,8 @@ FUNCTION {trim} {
 }
 
 FUNCTION {bbl.etal}
-{ entry.lang lang.zh =
-    { "等" }
-    { entry.lang lang.ja =
-        { "他" }
-        { entry.lang lang.ru =
-            { "идр" }
-            { "et~al." }
-          if$
-        }
-      if$
-    }
-  if$
+{ 
+  "et~al."
 }
 
 
@@ -441,6 +423,11 @@ FUNCTION {book}
     	format.pages write$
     } if$
     newline$
+}
+
+FUNCTION {incollection}
+{
+    book
 }
 
 FUNCTION {conference}
