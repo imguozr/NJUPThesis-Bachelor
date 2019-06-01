@@ -1,6 +1,6 @@
 # NUPThesis
 
-[![](https://img.shields.io/badge/Overleaf-NJUPT-blue.svg?style=flat-square)](https://www.overleaf.com/latex/templates/njupt-thesis-template/phdhtstygbyb)
+[![Overleaf](https://img.shields.io/badge/Overleaf-NJUPT-blue.svg?style=flat-square)](https://www.overleaf.com/latex/templates/njupt-thesis-template/phdhtstygbyb)
 
 南京邮电大学毕业论文LaTex模版
 
