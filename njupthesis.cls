@@ -83,7 +83,9 @@
 \RequirePackage{titletoc}
 \RequirePackage{everypage}
 \RequirePackage{ifoddpage}
+\RequirePackage{booktabs}
 
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
 
 \let\algorithm\relax
 \let\endalgorithm\relax
