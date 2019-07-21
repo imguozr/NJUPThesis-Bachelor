@@ -9,7 +9,8 @@
 NJUPThesis-Bachelor 是针对南京邮电大学本科理工艺教类本科生毕业设计、论文的 LaTeX 模版。本模版基于电子科技大学 [`ThesisUETSC`](https://github.com/wanygen/ThesisUESTC) 模版二次开发而成，同时，北京邮电大学 [`BUPTBachelorThesis`](https://github.com/sqyx008/BUPTBachelorThesis) 项目也对本模板的形成有较大的影响，在此向原作者们表示感谢！
 
 ## 更新说明
-- 2019.7.21 
+- **2019.7.21** 
+
     更新模板中关于不同平台的字体的使用，并且附上了对应的字体包，使得各平台能够较好的直接使用该模板进行编写latex文档，该模板已经在Windows和MacOS下完成测试。
 
 ## 系统环境
