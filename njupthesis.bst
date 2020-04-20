@@ -188,8 +188,16 @@ FUNCTION {trim} {
 }
 
 FUNCTION {bbl.etal}
-{ 
-  "et~al."
+{     
+    language empty$
+    { "et~al" }
+    {
+        language "zh" =
+            { "等" }
+            { "et~al" }
+        if$ 
+    }
+    if$
 }
 
 
