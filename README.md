@@ -2,7 +2,7 @@
 
 [![Overleaf](https://img.shields.io/badge/Overleaf-NJUPT-blue.svg?style=flat-square)](https://www.overleaf.com/latex/templates/njupt-thesis-template/phdhtstygbyb)
 
-南京邮电大学毕业论文LaTex模版
+南京邮电大学毕业论文 LaTex 模版
 
 ## 这是什么
 
@@ -20,6 +20,8 @@ NJUPThesis-Bachelor 是针对南京邮电大学本科理工艺教类本科生毕
 
 - `main.tex`: 论文的主体、附录，目前填充的是示例，可以对照生成的 `main.pdf` 熟悉代码。
 - `reference.bib`: 论文的参考文献库。
+
+**注意**： 如果你引用的中文参考文献作者超过三人，请在 `.bib` 文件对应条目中添加 `language={zh}` 属性，避免产生只能生成 `et al.` , 无法正确生成 `等.` 的问题。
 
 ### 用素材填充以下文件夹
 
@@ -43,14 +45,20 @@ NJUPThesis-Bachelor 是针对南京邮电大学本科理工艺教类本科生毕
 
 ## 如何贡献
 
-由于本人水平所限，该项目肯定会有些许问题，欢迎大家提出issue，关于**模板的问题请使用Issue功能提出，其它途径无法得到答复保证**，当然，更欢迎自行解决后提pull request。
+由于本人水平所限，该项目肯定会有些许问题，欢迎大家提出 issue，关于**模板的问题请使用Issue功能提出，其它途径无法得到答复保证**，当然，更欢迎自行解决后提 pull request。
 
-欢迎广而告之，欢迎在word调格式被折磨时投奔初期有一点学习（模仿）成本的LaTeX模板。
+欢迎广而告之，欢迎在 word 调格式被折磨时投奔初期有一点学习（模仿）成本的 LaTeX 模板。
 
-我不能保证一切都能过教务部门的关（虽然使用了Word的其它人也不能保证），不过我会在2019年使用这个模板提交论文，并在发现问题后及时更新。
+我不能保证一切都能过教务部门的关（虽然使用了Word的其它人也不能保证），不过我会在 2019 年使用这个模板提交论文，并在发现问题后及时更新。
 
-如果你愿意，不妨在致谢部分留下`本论文采用基于 LaTeX 的南京邮电大学本科论文模版编写。`，如果你愿意附上本GitHub repo的链接，那是再好不过了。
+**更新**：本人已顺利毕业，关于论文格式有没有通过审核的问题请参见这个 [issue](https://github.com/imguozr/NJUPThesis-Bachelor/issues/6)
+
+如果你愿意，不妨在致谢部分留下 `“本论文采用基于 LaTeX 的南京邮电大学本科论文模版编写。”` ，如果你愿意附上本项目的[GitHub 链接](https://github.com/imguozr/NJUPThesis-Bachelor) 或者[Overleaf 链接](https://www.overleaf.com/latex/templates/njupt-thesis-template/phdhtstygbyb)，那便是再好不过的了。
 
 ## 软件许可证
 
 本项目采用 [`Creative Commons — 署名4.0 国际— CC BY 4.0`](https://creativecommons.org/licenses/by/4.0/deed.zh) 协议。
+
+## 贡献者名单
+- [`imguozr`](https://github.com/imguozr)
+- [`largeword`](https://github.com/largeword)
