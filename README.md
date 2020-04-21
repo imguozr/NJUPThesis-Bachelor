@@ -45,15 +45,15 @@ NJUPThesis-Bachelor 是针对南京邮电大学本科理工艺教类本科生毕
 
 ## 如何贡献
 
-由于本人水平所限，该项目肯定会有些许问题，欢迎大家提出 issue，关于**模板的问题请使用Issue功能提出，其它途径无法得到答复保证**，当然，更欢迎自行解决后提 pull request。
+由于本人水平所限，该项目肯定会有些许问题，欢迎大家提出 Issue，关于**模板的问题请使用 Issue 功能提出，其它途径无法得到答复保证**，当然，更欢迎自行解决后发起 Pull request。
 
-欢迎广而告之，欢迎在 word 调格式被折磨时投奔初期有一点学习（模仿）成本的 LaTeX 模板。
+欢迎广而告之，欢迎在被 Word 文档的格式折磨时投奔初期有一点学习（模仿）成本的 LaTeX 模板。:-)
 
-我不能保证一切都能过教务部门的关（虽然使用了Word的其它人也不能保证），不过我会在 2019 年使用这个模板提交论文，并在发现问题后及时更新。
+我不能保证一切都能过教务部门的关（虽然使用了 Word 的其它人也不能保证），不过我会在 2019 年使用这个模板提交论文，并在发现问题后及时更新。
 
-**更新**：本人已顺利毕业，关于论文格式有没有通过审核的问题请参见这个 [issue](https://github.com/imguozr/NJUPThesis-Bachelor/issues/6)
+**更新**：本人已顺利毕业，关于论文格式有没有通过审核的问题请参考这个 [Issue](https://github.com/imguozr/NJUPThesis-Bachelor/issues/6)。
 
-如果你愿意，不妨在致谢部分留下 `“本论文采用基于 LaTeX 的南京邮电大学本科论文模版编写。”` ，如果你愿意附上本项目的[GitHub 链接](https://github.com/imguozr/NJUPThesis-Bachelor) 或者[Overleaf 链接](https://www.overleaf.com/latex/templates/njupt-thesis-template/phdhtstygbyb)，那便是再好不过的了。
+如果你愿意，不妨在致谢部分留下 `“本论文采用基于 LaTeX 的南京邮电大学本科论文模版编写。”` ，如果你愿意附上本项目的 [GitHub 链接](https://github.com/imguozr/NJUPThesis-Bachelor) 或者 [Overleaf 链接](https://www.overleaf.com/latex/templates/njupt-thesis-template/phdhtstygbyb)，那便是再好不过的了。
 
 ## 软件许可证
 
