@@ -145,12 +145,12 @@
   bindingoffset=0cm]{geometry}
 
 \setlength{\headheight}{1.5cm}
-\setlength{\footskip}{1.75pt}
+\setlength{\footskip}{20pt}
 
 \pagestyle{fancy}
 \linespread{1.391}
 \setlength\parindent{24pt}
-\titlespacing{\chapter}{0pt}{0pt}{18pt}
+\titlespacing{\chapter}{0pt}{-18pt}{15pt}
 \titlespacing{\section}{0pt}{18pt}{6pt}
 \titlespacing{\subsection}{0pt}{12pt}{6pt}
 \titlespacing{\subsubsection}{0pt}{12pt}{6pt}
@@ -414,7 +414,7 @@
   \vspace{2cm}
   
   \begin{tabular}{>{\fontsize{16pt}{16pt}\kaiti}l
-      >{\centering\arraybackslash\fontsize{15pt}{15pt}}
+      >{\centering\arraybackslash\fontsize{15pt}{15pt} \kaiti}
       p{11.53cm}}
     题\chinesespace\chinesespace 目{}{} & \thetitle \\
     \cline{2-2}
@@ -422,7 +422,7 @@
     \cline{2-2}
     学生姓名{}{} & \theauthor   \\
     \cline{2-2}
-    班级学号{}{} & {\large \thestudentclass \quad \thestudentid} \\
+    班级学号{}{} & {\large \thestudentid} \\
     \cline{2-2}
     指导老师{}{} & \theadvisor \\
     \cline{2-2}
