@@ -57,7 +57,7 @@ NJUPThesis-Bachelor 是针对南京邮电大学本科理工艺教类本科生毕
 
 ## 软件许可证
 
-本项目采用 [`Creative Commons — 署名4.0 国际— CC BY 4.0`](https://creativecommons.org/licenses/by/4.0/deed.zh) 协议。
+本项目采用 [`LaTeX Project Public License 1.3c`](https://www.latex-project.org/lppl/) 协议。
 
 ## 贡献者名单
 - [`imguozr`](https://github.com/imguozr)
