@@ -465,7 +465,7 @@
 
 \newcommand{\standardhead}{
   \fancyhf{}
-  \fancyhead[CE, CO]{\fontsize{10.5pt}{12.6pt}\selectfont 南京邮电大学\thegraduateyear 届本科生毕业设计（论文）}
+  \fancyhead[CE, CO]{\fontsize{10.5pt}{12.6pt}\selectfont 南京邮电大学\thegraduateyear 届本科生毕业设计（论文）\\}
   \fancyfoot[CE, CO]{\fontsize{10.5pt}{12.6pt}\selectfont\thepage}
 }
 
