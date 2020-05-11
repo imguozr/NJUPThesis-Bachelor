@@ -62,3 +62,4 @@ NJUPThesis-Bachelor 是针对南京邮电大学本科理工艺教类本科生毕
 ## 贡献者名单
 - [`imguozr`](https://github.com/imguozr)
 - [`largeword`](https://github.com/largeword)
+- [`Wonz5130`](https://github.com/Wonz5130)
