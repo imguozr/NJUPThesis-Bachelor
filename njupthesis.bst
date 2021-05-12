@@ -520,7 +520,7 @@ FUNCTION {thesis}
     newline$
 }
 
-FUNCTION {masterthesis}
+FUNCTION {mastersthesis}
 {
     thesis
 }
