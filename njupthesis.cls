@@ -27,22 +27,22 @@
   \setallmainfonts{Times New Roman}
   \setCJKmainfont[AutoFakeBold=true]{SimSun}
   \newCJKfontfamily{\heiti}{SimHei}
-  \newCJKfontfamily{\kaiti}{SimKai}
+  \newCJKfontfamily{\kaiti}{KaiTi}
 \else
 \ifmacosx
   \setallmainfonts{Times New Roman}
-  \setCJKmainfont[AutoFakeBold=true]{Songti SC}
-  \newCJKfontfamily{\heiti}{Heiti SC}
-  \newCJKfontfamily{\kaiti}{Kaiti SC}
+  \setCJKmainfont[AutoFakeBold=true]{SimSun}
+  \newCJKfontfamily{\heiti}{SimHei}
+  \newCJKfontfamily{\kaiti}{KaiTi}
 \else
-  \setCJKmainfont[AutoFakeBold=true]{simsun.ttc}
-  \newCJKfontfamily{\heiti}{simhei.ttf}
-  \newCJKfontfamily{\kaiti}{simkai.ttf}
+  \setCJKmainfont[AutoFakeBold=true]{SimSun}
+  \newCJKfontfamily{\heiti}{SimHei}
+  \newCJKfontfamily{\kaiti}{KaiTi}
   \setallmainfonts[
-    BoldFont=timesbd.ttf,
-    ItalicFont=timesi.ttf,
-    BoldItalicFont=timesbi.ttf,
-  ]{times.ttf}
+    BoldFont=Times New Roman Bold,
+    ItalicFont=Times New Roman Italic,
+    BoldItalicFont=Times New Roman Bold Italic,
+  ]{Times New Roman}
 \fi
 \fi
 
